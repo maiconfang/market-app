@@ -60,7 +60,7 @@ fun LoginUImaicon() {
     // Taxi ID
     Column() {
         Text(
-            text = "GREATER MONCTON - TAXI ASSOCIATION",
+            text = "GREATER MONCTON - MARKET",
             fontFamily = FontFamily.Monospace,
             textAlign = TextAlign.Left,
             fontSize = 40.sp,
