@@ -14,4 +14,5 @@
     <string name="drawer_zones_description">Zones navigation button</string>
     <string name="drawer_info_description">About navigation button</string>
     <string name="title_activity_meter">MeterActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
 </resources>
