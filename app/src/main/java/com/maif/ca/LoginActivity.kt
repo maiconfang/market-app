@@ -53,16 +53,15 @@ class LoginActivity : ComponentActivity() {
 fun LoginUImaicon() {
 
     val context = LocalContext.current
-    var taxiId by remember { mutableStateOf("") }
-    var driverId by remember { mutableStateOf("") }
+    var userId by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
 
     // Taxi ID
     Column() {
         Text(
-            text = "GREATER MONCTON - MARKET",
+            text = "Market Luna",
             fontFamily = FontFamily.Monospace,
-            textAlign = TextAlign.Left,
+            textAlign = TextAlign.Center,
             fontSize = 40.sp,
             fontWeight = FontWeight.Bold,
             color = Color.Green,
@@ -71,9 +70,9 @@ fun LoginUImaicon() {
                 .padding(bottom = 20.dp)
         )
         OutlinedTextField(
-            value = taxiId,
-            onValueChange = { taxiId = it },
-            label = { Text(text = "Enter your Taxi ID") },
+            value = userId,
+            onValueChange = { userId = it },
+            label = { Text(text = "Enter your User ID") },
             leadingIcon = {
                 Icon(Icons.Default.DriveEta, contentDescription = "taxi id")
             },
@@ -82,19 +81,6 @@ fun LoginUImaicon() {
                 .padding(bottom = 10.dp, top = 10.dp)
         )
 
-
-        // Driver ID
-        OutlinedTextField(
-            value = driverId,
-            onValueChange = { driverId = it },
-            label = { Text(text = "Enter your Driver ID") },
-            leadingIcon = {
-                Icon(Icons.Default.Person, contentDescription = "person")
-            },
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(bottom = 10.dp, top = 10.dp)
-        )
 
         OutlinedTextField(
             value = password,
@@ -111,14 +97,14 @@ fun LoginUImaicon() {
         )
 
         OutlinedButton(
-            onClick = { loggedmaicon(taxiId, driverId, password, context) },
+            onClick = { loggedmaicon(userId, password, context) },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(bottom = 10.dp, top = 10.dp)
         ) {
 
             Text(
-                text = "Login teste maicon fang",
+                text = "Login",
                 textAlign = TextAlign.Center
             )
         }
@@ -126,13 +112,13 @@ fun LoginUImaicon() {
 
 }
 
-fun loggedmaicon(taxiId: String, driverId: String, password: String, context: Context) {
+fun loggedmaicon(userId: String, password: String, context: Context) {
 
 
     context.startActivity(Intent(context, MainActivity::class.java))
 
 
-//    if (taxiId == "ca01" && driverId=="hw2" && password == "1234") {
+//    if (userId == "maicon" && password == "1234") {
 //        Toast.makeText(context, "Logged In Successfully", Toast.LENGTH_SHORT).show()
 //
 //        // Open the activity ZoneActivity
