@@ -47,11 +47,12 @@ fun MainCompose(
                                     popUpTo(NavRoutes.MainRoute.name)
                                 }
                             }
-                            MainNavOption.ZoneScreen -> {
+                            MainNavOption.LogoutScreen -> {
                                 navController.navigate(onUserPickedOption.name) {
                                     popUpTo(NavRoutes.MainRoute.name)
                                 }
                             }
+
 
                         }
                     }
@@ -96,10 +97,10 @@ object DrawerParams {
             R.string.drawer_info_description
         ),
         AppDrawerItemInfo(
-            MainNavOption.ZoneScreen,
-            R.string.drawer_zones,
-            R.drawable.ic_home,
-            R.string.drawer_zones_description
+            MainNavOption.LogoutScreen,
+            R.string.drawer_logout,
+            R.drawable.baseline_logout_24,
+            R.string.drawer_info_description
         )
     )
 }

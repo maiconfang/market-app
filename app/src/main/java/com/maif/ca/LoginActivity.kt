@@ -121,8 +121,8 @@ fun loggedmaicon(userId: String, password: String, context: Context) {
 //    if (userId == "maicon" && password == "1234") {
 //        Toast.makeText(context, "Logged In Successfully", Toast.LENGTH_SHORT).show()
 //
-//        // Open the activity ZoneActivity
-//        context.startActivity(Intent(context, ZoneActivity::class.java))
+
+//        context.startActivity(Intent(context, MainActivity::class.java))
 //
 //    } else {
 //        Toast.makeText(context, "Logged In Failed", Toast.LENGTH_SHORT).show()

@@ -5,10 +5,9 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
 import com.maif.ca.about.AboutScreen
-import com.maif.ca.zone.ZoneScreen
 import com.maif.ca.home.HomeScreen
 import com.maif.ca.settings.SettingsScreen
-import com.maif.ca.meter.MeterActivity
+import com.maif.ca.logout.LogoutScreen
 
 fun NavGraphBuilder.mainGraph(drawerState: DrawerState) {
     navigation(startDestination = MainNavOption.HomeScreen.name, route = NavRoutes.MainRoute.name) {
@@ -21,9 +20,12 @@ fun NavGraphBuilder.mainGraph(drawerState: DrawerState) {
         composable(MainNavOption.AboutScreen.name){
             AboutScreen(drawerState)
         }
-        composable(MainNavOption.ZoneScreen.name){
-            ZoneScreen(drawerState)
+
+        composable(MainNavOption.LogoutScreen.name){
+            LogoutScreen(drawerState)
         }
+
+
 
 
     }
@@ -33,5 +35,5 @@ enum class MainNavOption {
     HomeScreen,
     AboutScreen,
     SettingsScreen,
-    ZoneScreen,
+    LogoutScreen,
 }
