@@ -42,7 +42,14 @@ fun MainCompose(
                                     popUpTo(NavRoutes.MainRoute.name)
                                 }
                             }
+
                             MainNavOption.AboutScreen -> {
+                                navController.navigate(onUserPickedOption.name) {
+                                    popUpTo(NavRoutes.MainRoute.name)
+                                }
+                            }
+
+                            MainNavOption.MarketScreen -> {
                                 navController.navigate(onUserPickedOption.name) {
                                     popUpTo(NavRoutes.MainRoute.name)
                                 }
@@ -85,6 +92,13 @@ object DrawerParams {
             R.string.drawer_home_description
         ),
         AppDrawerItemInfo(
+            MainNavOption.MarketScreen,
+            R.string.drawer_market,
+            R.drawable.ic_market_shopping_cart,
+            R.string.drawer_market_description
+        ),
+
+        AppDrawerItemInfo(
             MainNavOption.SettingsScreen,
             R.string.drawer_settings,
             R.drawable.ic_settings,
@@ -99,7 +113,7 @@ object DrawerParams {
         AppDrawerItemInfo(
             MainNavOption.LogoutScreen,
             R.string.drawer_logout,
-            R.drawable.baseline_logout_24,
+            R.drawable.ic_logout,
             R.string.drawer_info_description
         )
     )

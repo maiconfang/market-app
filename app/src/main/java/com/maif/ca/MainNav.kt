@@ -5,6 +5,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
 import com.maif.ca.about.AboutScreen
+import com.maif.ca.market.MarketScreen
 import com.maif.ca.home.HomeScreen
 import com.maif.ca.settings.SettingsScreen
 import com.maif.ca.logout.LogoutScreen
@@ -14,6 +15,11 @@ fun NavGraphBuilder.mainGraph(drawerState: DrawerState) {
         composable(MainNavOption.HomeScreen.name){
             HomeScreen(drawerState)
         }
+
+        composable(MainNavOption.MarketScreen.name){
+            MarketScreen(drawerState)
+        }
+
         composable(MainNavOption.SettingsScreen.name){
             SettingsScreen(drawerState)
         }
@@ -36,4 +42,5 @@ enum class MainNavOption {
     AboutScreen,
     SettingsScreen,
     LogoutScreen,
+    MarketScreen,
 }
